@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <style type="text/css">
+        h1 {color:blue;}
+        h2 {color:red;}
+        p {color:green;}
+    </style>
+</head>
+<body>
+<div th:insert="~{index.html :: header}"></div>
+<!--<form alignment="center">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--        </tr>-->
+<!--        <td colspan="2"><h1 class="h3 mb-3 font-weight-normal">Please login</h1></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><label for="inputEmail" class="sr-only">Email address</label></td>-->
+<!--            <td><input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""-->
+<!--                       autofocus=""></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><label for="inputPassword" class="sr-only">Password</label></td>-->
+<!--            <td><input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</form>-->
+<form>
+    <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+    </div>
+</form>
+<div th:insert="~{footer :: copy}"></div>
+</body>
+</html>
